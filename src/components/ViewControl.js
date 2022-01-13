@@ -23,6 +23,11 @@ class ViewControl extends React.Component {
     this.setState({mainTapList: newMainTapList,
                   formVisibleOnPage: false});
   }
+
+  handleChangingSelectedTap = (id) => {
+    const selectedTap = this.state.mainTapList.filter(tap => tap.id === id)[0]
+    this.setState({selectedTap: selectedTap});
+  }
   render(){
     let currentlyVisibleState = null;
     let buttonText = null;
