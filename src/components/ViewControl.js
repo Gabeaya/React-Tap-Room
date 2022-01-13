@@ -6,12 +6,20 @@ class ViewControl extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      formVisibleOnPage: false
+    };
   }
   render(){
+    let currentlyVisibleState = null;
+    if (this.state.formVisibleOnPage) {
+      currentlyVisibleState = <NewTapForm />
+    } else {
+      currentlyVisibleState = <Menu />
+    }
     return(
       <React.Fragment>
-
+        {currentlyVisibleState}
       </React.Fragment>
     );
     
