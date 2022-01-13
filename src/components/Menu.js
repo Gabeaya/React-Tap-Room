@@ -28,7 +28,17 @@ const mainMenuList = [
 function Menu(){
 
   return (
-   <tap />
+    <React.Fragment>
+      {mainMenuList.map((tap, index)=>
+        <Tap name={tap.name}
+          brand={tap.name}
+          price={tap.price}
+          content={tap.content}
+          kegVal={tap.kegVal}
+          key={index}/>
+      )}
+    </React.Fragment>
+  
   );
 }
 export default Menu;
