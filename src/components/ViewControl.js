@@ -18,17 +18,18 @@ class ViewControl extends React.Component {
 
   render(){
     let currentlyVisibleState = null;
-    let addTapbutton = null;
+    let buttonText = null;
     if (this.state.formVisibleOnPage) {
       currentlyVisibleState = <NewTapForm />
+      buttonText = "Return to Menu"
     } else {
       currentlyVisibleState = <Menu />
-      addTapButton = <button onClick={this.handleClick}>Add Tap</button>
+      buttonText = "Add Tap";
     }
     return(
       <React.Fragment>
         {currentlyVisibleState}
-        {addTicketButton}
+        <button onClick={this.handleClick}>{buttonText}</button>
       </React.Fragment>
     );
     
