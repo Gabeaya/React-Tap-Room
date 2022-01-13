@@ -31,7 +31,7 @@ function Menu(){
     <React.Fragment>
       {mainMenuList.map((tap, index)=>
         <Tap name={tap.name}
-          brand={tap.name}
+          brand={tap.brand}
           price={tap.price}
           content={tap.content}
           kegVal={tap.kegVal}

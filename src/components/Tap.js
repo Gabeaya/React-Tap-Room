@@ -5,7 +5,7 @@ function Tap(props){
   return (
     <React.Fragment>
     <h2>{ props.name } - Pint {props.price}</h2>
-    <h3><em>{ props.brand }|ABV: {props.content}</em> </h3>
+    <h3><em>By { props.brand } | ABV: {props.content}</em> </h3>
 
 
     <hr/>
