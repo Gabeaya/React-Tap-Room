@@ -6,7 +6,9 @@ function Menu(){
     <Tap 
       name="Space Dust IPA"
       brand="hazy"
-      price="$5" />
+      price="$5" 
+      content="5%" 
+      kegVal="124" />
   );
 }
 export default Menu;
