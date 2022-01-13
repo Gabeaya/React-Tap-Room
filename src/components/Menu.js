@@ -8,7 +8,7 @@ function Menu(){
       brand="hazy"
       price="$5" 
       content="5%" 
-      kegVal="124" />
+      kegVal="124"g />
   );
 }
 export default Menu;
