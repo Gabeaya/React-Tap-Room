@@ -17,6 +17,11 @@ class ViewControl extends React.Component {
       formVisibleOnPage: !prevState.formVisibleOnPage}));
   }
 
+  handleAddingNewTapToList = (newTap) => {
+    const newMainTapList = this.state.mainTapList.concat(newTap);
+    this.setState({mainTapList: newMainTapList,
+                  formVisibleOnPage: false});
+  }
   render(){
     let currentlyVisibleState = null;
     let buttonText = null;
