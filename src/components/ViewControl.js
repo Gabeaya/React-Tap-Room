@@ -26,7 +26,7 @@ class ViewControl extends React.Component {
     let currentlyVisibleState = null;
     let buttonText = null;
     if (this.state.formVisibleOnPage) {
-      currentlyVisibleState = <NewTapForm />
+      currentlyVisibleState = <NewTapForm onNewTapCreation={this.handleAddingNewTapToList} />
       buttonText = "Return to Menu"
     } else {
       currentlyVisibleState = <Menu tapList={this.state.mainTapList} />
