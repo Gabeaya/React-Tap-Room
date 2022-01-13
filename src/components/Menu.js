@@ -1,35 +1,12 @@
 import React from "react";
 import Tap from "./Tap";
+import PropTypes from "prop=types";
 
-const mainMenuList = [ 
-  {
-    name: 'Riggity',
-    brand: 'doof',
-    price: '$6',
-    content: '8%',
-    kegVal: 124,
-  },
-  {
-    name: 'Wrecked',
-    brand: 'doof',
-    price: '$7',
-    content: '11%',
-    kegVal: 124,
-  },
-  {
-    name: 'Do the Trick',
-    brand: 'doof',
-    price: '$5',
-    content: '7%',
-    kegVal: 124,
-  }
-]
-
-function Menu(){
+function Menu(props){
 
   return (
     <React.Fragment>
-      {mainMenuList.map((tap, index)=>
+      {props.tapList.map((tap, index)=>
         <Tap name={tap.name}
           brand={tap.brand}
           price={tap.price}
@@ -38,7 +15,11 @@ function Menu(){
           key={index}/>
       )}
     </React.Fragment>
-  
   );
 }
+
+TapList.propTypes = {
+  tapList: PropTypes.array
+};
+
 export default Menu;
