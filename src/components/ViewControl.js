@@ -7,7 +7,8 @@ class ViewControl extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      formVisibleOnPage: false
+      formVisibleOnPage: false,
+      mainTapList: []
     };
   }
 
@@ -23,7 +24,7 @@ class ViewControl extends React.Component {
       currentlyVisibleState = <NewTapForm />
       buttonText = "Return to Menu"
     } else {
-      currentlyVisibleState = <Menu />
+      currentlyVisibleState = <Menu tapList={this.state.mainTapList} />
       buttonText = "Add Tap";
     }
     return(
