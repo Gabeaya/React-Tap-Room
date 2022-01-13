@@ -1,6 +1,7 @@
 import React from 'react';
 import NewTapForm from './NewTapForm';  
 import Menu from './Menu';
+import TapDetail  from './TapDetail';
 
 class ViewControl extends React.Component {
 
@@ -31,11 +32,14 @@ class ViewControl extends React.Component {
   render(){
     let currentlyVisibleState = null;
     let buttonText = null;
-    if (this.state.formVisibleOnPage) {
-      currentlyVisibleState = <NewTapForm onNewTapCreation={this.handleAddingNewTapToList} />
+    if (this.state.selectedTickety !=null){
+      currentlyVisibleState= <TapDetail tap= {this.state.selectedTap} />;
+      buttonText="Return to Menu";
+    } else if (this.state.formVisibleOnPage) {
+      currentlyVisibleState = <NewTapForm onNewTapCreation={this.handleAddingNewTapToList} />;
       buttonText = "Return to Menu"
     } else {
-      currentlyVisibleState = <Menu tapList={this.state.mainTapList} />
+      currentlyVisibleState = <Menu tapList={this.state.mainTapList} onTapSelection={this.handleChangingSelectedTap}/>;
       buttonText = "Add Tap";
     }
     return(
