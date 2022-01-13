@@ -5,9 +5,9 @@ import { v4 } from 'uuid';
 function NewTapForm(props){
   function handleNewTapFormSubmission(event){
     event.preventDefault();
-    props.onNewTapCreation({name: event.target.name.value, brand: event.target.brand.value, price: event.target.price.value, content: event.target.content.value, kegVal: event.target.kegVal.value, id: v4()}); 
+    props.onNewTapCreation({name: event.target.name.value, location: event.target.location.value, price: event.target.price.value, content: event.target.content.value, kegVal: event.target.kegVal.value, id: v4()}); 
   }
-  
+
   return(
     <React.Fragment>
       <form onSubmit={handleNewTapFormSubmission}>
@@ -18,7 +18,7 @@ function NewTapForm(props){
         
         <input 
           type='text'
-          name='brand'
+          name='location'
           placeholder='Where is this beverage from?'/>
         <input 
           type='text'

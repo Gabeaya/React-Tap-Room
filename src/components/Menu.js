@@ -1,6 +1,6 @@
 import React from "react";
 import Tap from "./Tap";
-import PropTypes from "prop=types";
+import PropTypes from "prop-types";
 
 function Menu(props){
 
@@ -8,7 +8,7 @@ function Menu(props){
     <React.Fragment>
       {props.tapList.map((tap, index)=>
         <Tap name={tap.name}
-          brand={tap.brand}
+          location={tap.location}
           price={tap.price}
           content={tap.content}
           kegVal={tap.kegVal}
@@ -18,7 +18,7 @@ function Menu(props){
   );
 }
 
-TapList.propTypes = {
+Menu.propTypes = {
   tapList: PropTypes.array
 };
 
