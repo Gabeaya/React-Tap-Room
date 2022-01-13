@@ -2,7 +2,7 @@ import React from "react";
 
 function Header (){
   return(
-  <h1> TapRoom </h1>
+  <h1> Welcome to Ricktoberfest </h1>
   );
 }
 
