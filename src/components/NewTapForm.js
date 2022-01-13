@@ -1,8 +1,12 @@
 import React from "react";
-
+import PropTypes from "prop-types";
 import { v4 } from 'uuid';
 
 function NewTapForm(props){
+  function handleNewTapFormSubmission(event){
+    event.preventDefault();
+    
+  }
   return(
     <React.Fragment>
       <form onSubmit={handleNewTapFormSubmission}>
@@ -32,4 +36,8 @@ function NewTapForm(props){
     </React.Fragment>
   )
 }
+
+NewTapForm.propTypes = {
+  onNewTapCreation: PropTypes.func
+};
 export default NewTapForm;
