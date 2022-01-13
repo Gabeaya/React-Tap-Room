@@ -8,7 +8,8 @@ class ViewControl extends React.Component {
     super(props);
     this.state = {
       formVisibleOnPage: false,
-      mainTapList: []
+      mainTapList: [],
+      selectedTap: null
     };
   }
 
