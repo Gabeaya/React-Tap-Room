@@ -3,7 +3,10 @@ import Tap from "./Tap";
 
 function Menu(){
   return (
-    <Tap />
+    <Tap 
+      name="Space Dust IPA"
+      brand="hazy"
+      price="$5/pint" />
   );
 }
 export default Menu;
