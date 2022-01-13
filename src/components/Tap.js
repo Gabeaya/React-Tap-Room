@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from "prop-types";
 
 function Tap(props){
-  const name = "Weihenstephaner Vitus";
   return (
     <React.Fragment>
     <h2>{ props.name } - Pint {props.price}</h2>
@@ -15,10 +14,10 @@ function Tap(props){
 }
 
 Tap.propTypes = {
-  name: PropTypes.string,
+  name: PropTypes.string.isRequired,
   brand: PropTypes.string,
-  price: PropTypes.string,
+  price: PropTypes.string.isRequired,
   content: PropTypes.string,
-  kegVal: PropTypes.number
-}
+  kegVal: PropTypes.number.isRequired
+};
 export default Tap;
