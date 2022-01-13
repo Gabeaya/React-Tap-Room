@@ -5,8 +5,9 @@ import { v4 } from 'uuid';
 function NewTapForm(props){
   function handleNewTapFormSubmission(event){
     event.preventDefault();
-    
+    props.onNewTapCreation({name: event.target.name.value, brand: event.target.brand.value, price: event.target.price.value, content: event.target.content.value, kegVal: event.target.kegVal.value, id: v4()}); 
   }
+  
   return(
     <React.Fragment>
       <form onSubmit={handleNewTapFormSubmission}>
