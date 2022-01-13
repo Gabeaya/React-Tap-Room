@@ -10,6 +10,11 @@ class ViewControl extends React.Component {
       formVisibleOnPage: false
     };
   }
+
+  handleClick = () => {
+    this.setState({formVisibleOnPage: true});
+  }
+  
   render(){
     let currentlyVisibleState = null;
     let addTapbutton = null;
