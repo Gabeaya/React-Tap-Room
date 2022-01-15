@@ -6,7 +6,7 @@ function EditTapForm (props) {
   const {tap} = props;
   function  handleEditTapFormSubmission(event) {
     event.preventDefault();
-    props.onEditTicket({name: event.target.name.value, location: event.target.location.value, price: event.target.price.value, content: event.target.content.value, kegVal: 124, id: ticket.id});
+    props.onEditTap({name: event.target.name.value, location: event.target.location.value, price: event.target.price.value, content: event.target.content.value, kegVal: 124, id: tap.id});
   }
   return (
     <React.Fragment>

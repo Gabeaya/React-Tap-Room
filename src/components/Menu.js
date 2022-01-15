@@ -13,7 +13,6 @@ function Menu(props){
           location={tap.location}
           price={tap.price}
           content={tap.content}
-          kegVal={tap.kegVal}
           id={tap.id}
           key={tap.id}/>
       )}

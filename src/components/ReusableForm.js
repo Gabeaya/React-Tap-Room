@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 function ReusableForm(props) {
   return (
     <React.Fragment>
-      <form onSubmit={handleNewTapFormSubmission}>
+      <form onSubmit={props.formSubmissionHandler}>
         <input
           type='text'
           name='name'
@@ -23,7 +23,7 @@ function ReusableForm(props) {
           name='content'
           placeholder='What is the ABV?'/>
 
-        <button type='submit'>Add to Menu</button>
+        <button type='submit'>{props.buttonText}</button>
         <p>*Each submitted form has an automated 124 pints added per Tap item</p>
 
       </form>
