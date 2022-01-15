@@ -15,10 +15,10 @@ class ViewControl extends React.Component {
   }
 
   handleClick = () => {
-    if (this.state.selecteTicket != null) {
+    if (this.state.selectedTap != null) {
       this.setState({
         formVisibleOnPage: false,
-        selecteTicket: null
+        selectedTap: null
       });
     } else {
       this.setState(prevState => ({
@@ -34,13 +34,14 @@ class ViewControl extends React.Component {
   }
 
   handleChangingSelectedTap = (id) => {
-    const selectedTap = this.state.mainTapList.filter(tap => tap.id === id)[0]
+    const selectedTap = this.state.mainTapList.filter(tap => tap.id === id)[0];
     this.setState({selectedTap: selectedTap});
   }
   render(){
     let currentlyVisibleState = null;
     let buttonText = null;
-    if (this.state.selectedTickety !=null){
+
+    if (this.state.selectedTap != null) {
       currentlyVisibleState= <TapDetail tap= {this.state.selectedTap} />;
       buttonText="Return to Menu";
     } else if (this.state.formVisibleOnPage) {
