@@ -68,8 +68,8 @@ class ViewControl extends React.Component {
     let buttonText = null;
 
     if (this.state.editing) {
-      currentlyVisibleState = <EditTapForm tap = { this.state.selectedTap} />;
-      buttonText: "Return to Menu";
+      currentlyVisibleState = <EditTapForm tap = { this.state.selectedTap} onEditTap={this.handleEditingTapInList} />;
+      buttonText="Return to Menu";
     } else if (this.state.selectedTap != null) {
       currentlyVisibleState= <TapDetail tap= {this.state.selectedTap} onCLickingDelete={this.handleDeleteingTap} onClickingEdit = {this.handleEditClick}/>;
       buttonText="Return to Menu";
