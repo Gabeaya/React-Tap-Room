@@ -15,8 +15,16 @@ class ViewControl extends React.Component {
   }
 
   handleClick = () => {
-    this.setState(prevState => ({
-      formVisibleOnPage: !prevState.formVisibleOnPage}));
+    if (this.state.selecteTicket != null) {
+      this.setState({
+        formVisibleOnPage: false,
+        selecteTicket: null
+      });
+    } else {
+      this.setState(prevState => ({
+        formVisibleOnPage: !prevState.formVisibleOnPage,
+      }));
+    }
   }
 
   handleAddingNewTapToList = (newTap) => {
