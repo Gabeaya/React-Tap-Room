@@ -18,7 +18,8 @@ class ViewControl extends React.Component {
     if (this.state.selectedTap != null) {
       this.setState({
         formVisibleOnPage: false,
-        selectedTap: null
+        selectedTap: null,
+        editing: false
       });
     } else {
       this.setState(prevState => ({
