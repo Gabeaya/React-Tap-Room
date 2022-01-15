@@ -17,4 +17,8 @@ function TapDetail(prop){
 
   );
 }
+
+TapDetail.propTypes = {
+  tap: PropTypes.object
+};
 export default TapDetail;
