@@ -11,7 +11,8 @@ class ViewControl extends React.Component {
     this.state = {
       formVisibleOnPage: false,
       mainTapList: [],
-      selectedTap: null
+      selectedTap: null,
+      editing: false
     };
   }
 
@@ -40,8 +41,8 @@ class ViewControl extends React.Component {
     this.setState({selectedTap: selectedTap});
   }
 
-  handleDeleteingTap = (id) => {
-    const newMainTapList = this.state.mainTapList.filter(ticket => ticket.id !== id);
+  handleDeletingTap = (id) => {
+    const newMainTapList = this.state.mainTapList.filter(tap => tap.id !== id);
     this.setState({
       mainTapList: newMainTapList,
       selectedTap: null
@@ -63,6 +64,25 @@ class ViewControl extends React.Component {
     });
 
   }
+  
+  handleDecrementingPints = (id) => {
+    if (this.state.mainTapList.length > 1) {
+      const decrementedList = this.state.mainTapList.filter(tap => tap.id === id)[0]
+      decrementedList.kegVal --;
+      const newMainTapList = this.state.mainTapList.filter(tap => tap.id !== id).concat(decrementedList);
+      this.setState({
+        mainTapList: newMainTapList
+      });
+    } else {
+      const decrementedList = this.state.mainTapList.filter(tap=> tap.id === id)[0]
+      decrementedList.kegVal ++;
+      const newMainTapList = []
+      const changedTapList = newMainTapList.concat(decrementedList);
+      this.setState({
+        mainTapList: changedTapList
+      });
+    }
+  }
   render(){
     let currentlyVisibleState = null;
     let buttonText = null;
@@ -71,7 +91,7 @@ class ViewControl extends React.Component {
       currentlyVisibleState = <EditTapForm tap = { this.state.selectedTap} onEditTap={this.handleEditingTapInList} />;
       buttonText="Return to Menu";
     } else if (this.state.selectedTap != null) {
-      currentlyVisibleState= <TapDetail tap= {this.state.selectedTap} onCLickingDelete={this.handleDeleteingTap} onClickingEdit = {this.handleEditClick}/>;
+      currentlyVisibleState= <TapDetail tap= {this.state.selectedTap} onClickingDelete={this.handleDeletingTap} onClickingEdit = {this.handleEditClick}/>;
       buttonText="Return to Menu";
     } else if (this.state.formVisibleOnPage) {
       currentlyVisibleState = <NewTapForm onNewTapCreation={this.handleAddingNewTapToList} />;
