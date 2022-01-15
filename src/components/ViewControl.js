@@ -74,8 +74,9 @@ class ViewControl extends React.Component {
         mainTapList: newMainTapList
       });
     } else {
+      console.log("yup");
       const decrementedList = this.state.mainTapList.filter(tap=> tap.id === id)[0]
-      decrementedList.kegVal ++;
+      decrementedList.kegVal --;
       const newMainTapList = []
       const changedTapList = newMainTapList.concat(decrementedList);
       this.setState({
