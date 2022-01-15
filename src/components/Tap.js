@@ -20,7 +20,7 @@ Tap.propTypes = {
   location: PropTypes.string,
   price: PropTypes.string.isRequired,
   content: PropTypes.string,
-  kegVal: PropTypes.number.isRequired,
+  kegVal: PropTypes.number,
   whenTapClicked: PropTypes.func
 };
 export default Tap;
