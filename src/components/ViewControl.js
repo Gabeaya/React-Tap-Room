@@ -2,6 +2,7 @@ import React from 'react';
 import NewTapForm from './NewTapForm';  
 import Menu from './Menu';
 import TapDetail  from './TapDetail';
+import EditTapForm form "./EditTapForm";
 
 class ViewControl extends React.Component {
 
@@ -54,7 +55,10 @@ class ViewControl extends React.Component {
     let currentlyVisibleState = null;
     let buttonText = null;
 
-    if (this.state.selectedTap != null) {
+    if (this.state.editing) {
+      currentlyVisibleState = <EditTapForm tap = { this.state.selectedTap} />;
+      buttonText: "Return to Menu";
+    } else if (this.state.selectedTap != null) {
       currentlyVisibleState= <TapDetail tap= {this.state.selectedTap} onCLickingDelete={this.handleDeleteingTap} onClickingEdit = {this.handleEditClick}/>;
       buttonText="Return to Menu";
     } else if (this.state.formVisibleOnPage) {
