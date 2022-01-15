@@ -5,7 +5,7 @@ import { v4 } from 'uuid';
 function NewTapForm(props){
   function handleNewTapFormSubmission(event){
     event.preventDefault();
-    props.onNewTapCreation({name: event.target.name.value, location: event.target.location.value, price: event.target.price.value, content: event.target.content.value, kegVal: event.target.kegVal.value, id: v4()}); 
+    props.onNewTapCreation({name: event.target.name.value, location: event.target.location.value, price: event.target.price.value, content: event.target.content.value, kegVal: 124, id: v4()}); 
   }
 
   return(
@@ -28,16 +28,14 @@ function NewTapForm(props){
           type='text'
           name='content'
           placeholder='What is the ABV?'/>
-        <input
-          type='number'
-          name='kegVal'
-          placeholder='Input 124 if its a keg.'/>
+
         <button type='submit'>Add to Menu</button>
+        <p>*Each submitted form has an automated 124 pints added per Tap item</p>
+
       </form>
     </React.Fragment>
   )
 }
-
 NewTapForm.propTypes = {
   onNewTapCreation: PropTypes.func
 };
