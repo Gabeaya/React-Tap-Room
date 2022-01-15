@@ -2,7 +2,7 @@ import React from 'react';
 import NewTapForm from './NewTapForm';  
 import Menu from './Menu';
 import TapDetail  from './TapDetail';
-import EditTapForm form "./EditTapForm";
+import EditTapForm from './EditTapForm';
 
 class ViewControl extends React.Component {
 
@@ -50,6 +50,18 @@ class ViewControl extends React.Component {
 
   handleEditClick = () => {
     this.setState({editing: true});
+  }
+  
+  handleEditingTapInList = (tapToEdit) => {
+    const editedMainTapList = this.state.mainTapList
+      .filter(tap => tap.id !== this.state.selectedTap.id)
+      .concat(tapToEdit);
+    this.setState({
+      mainTapList: editedMainTapList,
+      editing: false,
+      selectedTap: null
+    });
+
   }
   render(){
     let currentlyVisibleState = null;
