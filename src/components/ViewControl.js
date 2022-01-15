@@ -46,6 +46,10 @@ class ViewControl extends React.Component {
       selectedTap: null
     });
   }
+
+  handleEditClick = () => {
+    this.setState({editing: true});
+  }
   render(){
     let currentlyVisibleState = null;
     let buttonText = null;
