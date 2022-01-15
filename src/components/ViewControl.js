@@ -37,6 +37,14 @@ class ViewControl extends React.Component {
     const selectedTap = this.state.mainTapList.filter(tap => tap.id === id)[0];
     this.setState({selectedTap: selectedTap});
   }
+
+  handleDeleteingTap = (id) => {
+    const newMainTapList = this.state.mainTapList.filter(ticket => ticket.id !== id);
+    this.setState({
+      mainTapList: newMainTapList,
+      selectedTap: null
+    });
+  }
   render(){
     let currentlyVisibleState = null;
     let buttonText = null;
