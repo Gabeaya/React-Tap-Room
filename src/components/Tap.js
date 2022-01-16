@@ -18,8 +18,8 @@ function Tap(props){
 Tap.propTypes = {
   name: PropTypes.string.isRequired,
   location: PropTypes.string,
-  price: PropTypes.string.isRequired,
-  content: PropTypes.string,
+  price: PropTypes.number.isRequired,
+  content: PropTypes.number,
   kegVal: PropTypes.number,
   whenTapClicked: PropTypes.func
 };
