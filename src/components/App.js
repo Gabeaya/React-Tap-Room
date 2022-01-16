@@ -5,11 +5,9 @@ import ViewControl from './ViewControl';
 function App() {
   return (
     <React.Fragment>
-      <div class="container">
-        <Header />
-        <br/>
-        <ViewControl />
-      </div>
+      <Header />
+      <br/>
+      <ViewControl />
       
     </React.Fragment>
     
