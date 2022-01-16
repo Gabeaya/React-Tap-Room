@@ -36,7 +36,7 @@ function ReusableForm(props) {
           defaultValue={124} />
           <br/>
         <button type='submit'>{props.buttonText}</button>
-        <p><b>*Each submitted form automates 124 pints per Tap item</b></p>
+        <p><b>  Each submitted form automates 124 pints per Tap item  </b></p>
 
       </form>
     </React.Fragment>
