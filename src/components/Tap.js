@@ -4,11 +4,13 @@ import PropTypes from "prop-types";
 function Tap(props){
   return (
     <React.Fragment>
-    <h2>{ props.name } - Pint ${props.price}</h2>
-    <h3><em>From { props.location } | ABV: {props.content}%</em> </h3>
+    <div onClick = {() => props.whenTapClicked(props.id)}>
+      <h2>{ props.name } | $ {props.price} a Pint</h2>
+      <h3><em>From { props.location } | ABV: {props.content}%</em> </h3>
 
 
-    <hr/>
+      <hr/>
+    </div>
   </React.Fragment>
   );
 }
@@ -16,8 +18,9 @@ function Tap(props){
 Tap.propTypes = {
   name: PropTypes.string.isRequired,
   location: PropTypes.string,
-  price: PropTypes.string.isRequired,
-  content: PropTypes.string,
-  kegVal: PropTypes.number.isRequired
+  price: PropTypes.number.isRequired,
+  content: PropTypes.number,
+  kegVal: PropTypes.number,
+  whenTapClicked: PropTypes.func
 };
 export default Tap;

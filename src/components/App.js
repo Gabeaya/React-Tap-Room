@@ -6,8 +6,13 @@ function App() {
   return (
     <React.Fragment>
       <Header />
-      <ViewControl />
-      </React.Fragment>
+      <br/>
+      <div class="container">
+        <ViewControl />
+      </div>
+      
+      
+    </React.Fragment>
     
   );
 }
