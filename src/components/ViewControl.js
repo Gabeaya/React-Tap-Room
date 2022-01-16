@@ -68,20 +68,45 @@ class ViewControl extends React.Component {
   handleDecrementingPints = (id) => {
     if (this.state.mainTapList.length > 1) {
       const decrementedList = this.state.mainTapList.filter(tap => tap.id === id)[0]
-      decrementedList.kegVal --;
-      const newMainTapList = this.state.mainTapList.filter(tap => tap.id !== id).concat(decrementedList);
-      this.setState({
-        mainTapList: newMainTapList
-      });
+      if(decrementedList.kegVal === 10){
+        alert('Almost Empty');
+        decrementedList.kegVal --;
+        const newMainTapList = []
+        const changedTapList = newMainTapList.concat(decrementedList);
+        this.setState({
+          mainTapList: changedTapList
+        });
+      } else if(decrementedList.kegVal === 0){
+        return alert("Keg is empty!");
+      }else{
+        decrementedList.kegVal --;
+        const newMainTapList = this.state.mainTapList.filter(tap => tap.id !== id).concat(decrementedList);
+        this.setState({
+          mainTapList: newMainTapList
+        });
+      }
     } else {
       console.log("yup");
       const decrementedList = this.state.mainTapList.filter(tap=> tap.id === id)[0]
-      decrementedList.kegVal --;
-      const newMainTapList = []
-      const changedTapList = newMainTapList.concat(decrementedList);
-      this.setState({
-        mainTapList: changedTapList
-      });
+      if(decrementedList.kegVal === 10){
+        alert('Almost Empty');
+        decrementedList.kegVal --;
+        const newMainTapList = []
+        const changedTapList = newMainTapList.concat(decrementedList);
+        this.setState({
+          mainTapList: changedTapList
+        });
+      } else if(decrementedList.kegVal === 0){
+        return alert("Keg is empty!");
+      } else {
+        decrementedList.kegVal --;
+        const newMainTapList = []
+        const changedTapList = newMainTapList.concat(decrementedList);
+        this.setState({
+          mainTapList: changedTapList
+        });
+      }
+      
     }
   }
   render(){
@@ -89,7 +114,7 @@ class ViewControl extends React.Component {
     let buttonText = null;
 
     if (this.state.editing) {
-      currentlyVisibleState = <EditTapForm tap = { this.state.selectedTap} onEditTap={this.handleEditingTapInList} />;
+      currentlyVisibleState = <EditTapForm tap = { this.state.selectedTap} onEditTap={this.handleEditingTapInList} />
       buttonText="Return to Menu";
     } else if (this.state.selectedTap != null) {
       currentlyVisibleState= <TapDetail tap= {this.state.selectedTap} onClickingDelete={this.handleDeletingTap} onClickingEdit = {this.handleEditClick} onClickingDecrement={this.handleDecrementingPints}/>;
