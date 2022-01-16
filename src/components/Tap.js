@@ -5,7 +5,7 @@ function Tap(props){
   return (
     <React.Fragment>
     <div onClick = {() => props.whenTapClicked(props.id)}>
-      <h2>{ props.name } - Pint $ {props.price}</h2>
+      <h2>{ props.name } - $ {props.price}/Pint</h2>
       <h3><em>From { props.location } | ABV: {props.content}%</em> </h3>
 
 

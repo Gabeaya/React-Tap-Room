@@ -13,7 +13,7 @@ function TapDetail(props){
       <h3>{tap.content}% ABV</h3>
       <h3>Pints Remaining: {tap.kegVal} pts</h3>
       <button onClick={props.onClickingEdit}>Update Tap</button>
-      <button onClick={()=> onClickingDelete(tap.id)}>Close Tap</button>
+      <button onClick={()=> onClickingDelete(tap.id)}>Discontinue Tap</button>
       <button onClick={() => onClickingDecrement(tap.id)}>Pint Sold</button>
       <hr/>
     </React.Fragment>

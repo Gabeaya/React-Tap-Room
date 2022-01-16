@@ -6,6 +6,7 @@ function App() {
   return (
     <React.Fragment>
       <Header />
+      <br/>
       <ViewControl />
       </React.Fragment>
     
