@@ -40,7 +40,7 @@ Welcome to The Sip Room! A keg management program that allows business owners to
     <summary>Installation of Program and Startup</summary>
 
 1. Open the terminal on your local machine and navigate to "Desktop."
-2. Clone Tap Room with the following git command `git clone https://github.com/GBProductions/tap-room.git`
+2. Clone Tap Room with the following git command `git clone https://github.com/Gabeaya/React-Tap-Room.git`
 3. Navigate to the top level of the repository with the command `cd react-tap-room`
 4. In the CL, type in `npm install`.
 5. In the CL, type in `npm run build`.
