@@ -44,5 +44,10 @@ h1{
   padding-top: 10px;
   padding-bottom: 10px;
   margin: auto;
-  border-radius: 20%;
+  border-radius: 5%;
+}
+button {
+  color: rgb(180, 140, 39);
+border-radius: 20px;
+
 }
