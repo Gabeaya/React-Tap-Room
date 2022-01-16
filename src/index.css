@@ -23,13 +23,26 @@ code {
 
 p {
   font-family: "auto";
-  color: rgb(255, 255, 255);
-  background-color: rgb(218, 190, 50);
-  text-shadow:1px  1px rgb(103, 76, 42);
+  color: rgb(173, 127, 35);
+  background-color: rgba(218, 190, 50, 0.39);
+  text-shadow:2px  2px rgb(255, 255, 255);
 
 }
 
 h1{
+  padding-top: 50px;
   font-family: "HeaderFont";
   color: rgb(131, 103, 62);
+  background-color: rgba(255, 235, 205, 0.795);
+  text-shadow: 3px 3px rgb(255, 255, 255);
+
 } 
+
+.container {
+  background-color: rgb(248, 229, 200);
+  display: table;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: auto;
+  border-radius: 20%;
+}
