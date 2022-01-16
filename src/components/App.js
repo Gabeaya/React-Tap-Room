@@ -7,7 +7,10 @@ function App() {
     <React.Fragment>
       <Header />
       <br/>
-      <ViewControl />
+      <div class="container">
+        <ViewControl />
+      </div>
+      
       
     </React.Fragment>
     
