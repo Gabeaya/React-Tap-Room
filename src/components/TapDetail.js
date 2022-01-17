@@ -7,7 +7,7 @@ function TapDetail(props){
   return (
     <React.Fragment>
       <h2>Tap Details</h2>
-      <h3>{tap.name}</h3>
+      <h3>"{tap.name}"</h3>
       <h3>Located in {tap.location}</h3>
       <h3>$ {tap.price} a pint</h3>
       <h3>{tap.content}% ABV</h3>

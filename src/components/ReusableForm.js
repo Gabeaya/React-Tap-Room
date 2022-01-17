@@ -29,7 +29,7 @@ function ReusableForm(props) {
           name='content'
           placeholder='What is the ABV?'/>
           <br/>
-
+        <h3>Keg Value</h3>
         <input 
           type='number'
           name='kegVal'
