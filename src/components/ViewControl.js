@@ -112,16 +112,18 @@ class ViewControl extends React.Component {
   render(){
     let currentlyVisibleState = null;
     let buttonText = null;
-
+    let formText = null;
     if (this.state.editing) {
       currentlyVisibleState = <EditTapForm tap = { this.state.selectedTap} onEditTap={this.handleEditingTapInList} />
       buttonText="Return to Menu";
+      
     } else if (this.state.selectedTap != null) {
       currentlyVisibleState= <TapDetail tap= {this.state.selectedTap} onClickingDelete={this.handleDeletingTap} onClickingEdit = {this.handleEditClick} onClickingDecrement={this.handleDecrementingPints}/>;
       buttonText="Return to Menu";
     } else if (this.state.formVisibleOnPage) {
       currentlyVisibleState = <NewTapForm onNewTapCreation={this.handleAddingNewTapToList} />;
-      buttonText = "Return to Menu"
+      buttonText = "Return to Menu";
+      formText="Update Tap";
     } else {
       currentlyVisibleState = <Menu tapList={this.state.mainTapList} onTapSelection={this.handleChangingSelectedTap}/>;
       buttonText = "Add Tap";

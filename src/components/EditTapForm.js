@@ -13,6 +13,7 @@ function EditTapForm (props) {
   return (
     <React.Fragment>
       <ReusableForm 
+        formText="Update Keg Details"
         formSubmissionHandler={{handleEditTapFormSubmission}}
         buttonText="Update Tap" />
     </React.Fragment>

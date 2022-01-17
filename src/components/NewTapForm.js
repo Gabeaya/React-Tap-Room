@@ -13,6 +13,7 @@ function NewTapForm(props){
   return(
     <React.Fragment>
       <ReusableForm
+      formText="New Keg Info"
       formSubmissionHandler={handleNewTapFormSubmission}
       buttonText="Add Tap" />
     </React.Fragment>
