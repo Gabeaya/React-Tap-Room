@@ -7,7 +7,7 @@ import ReusableForm from "./ReusableForm";
 function NewTapForm(props){
   function handleNewTapFormSubmission(event){
     event.preventDefault();
-    props.onNewTapCreation({name: event.target.name.value, location: event.target.location.value, price: event.target.price.value, content: event.target.content.value, kegVal: event.target.kegVal.value, id: v4()}); 
+    props.onNewTapCreation({name: event.target.name.value, location: event.target.location.value, price: parseInt(event.target.price.value), content: parseInt(event.target.content.value), kegVal: parseInt(event.target.kegVal.value), id: v4()}); 
   }
 
   return(
