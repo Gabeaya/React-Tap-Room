@@ -51,7 +51,7 @@ Welcome to The Sip Room! A keg management program that allows business owners to
 
 ## Known Bugs
 
-_Update functionality currently deletes all taps._
+_None._
 
 
 ## Support and contact details
