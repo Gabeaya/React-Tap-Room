@@ -51,7 +51,7 @@ Welcome to The Sip Room! A keg management program that allows business owners to
 
 ## Known Bugs
 
-_None._
+_When attempting to update keg details, the form doesn't automate the current value of pints. This means users would have to remember the amount of pints from the details page when updating the kegs info._
 
 
 ## Support and contact details
