@@ -8,13 +8,13 @@ function EditTapForm (props) {
   function handleEditTapFormSubmission(event) 
   {
     event.preventDefault();
-    props.onEditTap({name: event.target.name.value, location: event.target.location.value, price: event.target.price.value, content: event.target.content.value, kegVal: event.target.kegVal.value, id: tap.id});
+    props.onEditTap({name: event.target.name.value, location: event.target.location.value, price: parseInt(event.target.price.value), content: parseInt(event.target.content.value), kegVal: parseInt(event.target.kegVal.value), id: tap.id});
   }
   return (
     <React.Fragment>
       <ReusableForm 
         formText="Update Keg Details"
-        formSubmissionHandler={{handleEditTapFormSubmission}}
+        formSubmissionHandler={handleEditTapFormSubmission}
         buttonText="Update Tap" />
     </React.Fragment>
   );
