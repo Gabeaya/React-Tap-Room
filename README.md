@@ -1,6 +1,6 @@
 # Tap Room - React Fundamentals Code Review 
-* _Date Created: August 21st 2021_
-* _Last Updated: August 29th 2021_
+* _Date Created: January 13th 2022_
+* _Last Updated: January 19th 2022_
 
 #### By _Gabriel Ayala_
 
